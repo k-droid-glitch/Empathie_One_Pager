@@ -1,0 +1,57 @@
+.navbar{
+    background: white;
+    font-family: calibri;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    font-weight: bolder;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: rgb(71, 71, 71);
+    font-size: 10px;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    padding: 65px;
+    box-sizing: border-box;
+  }
+
+  #einleitung {
+    font-family: calibri;
+    color: rgb(71, 71, 71);
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .arrow {
+    
+    font-size: 1em; /* Größe des Pfeils */
+    margin-top: 60px; /* Abstand zum Paragraphen */
+    color: rgb(71, 71, 71);
+    justify-content: center;
+    align-items: center;
+  }
