@@ -191,6 +191,7 @@ li a {
     height: 100%;
     background-color: white; /* Hintergrundfarbe für die obere Hälfte */
     clip-path: polygon(50% 30%, 100% 20%, 100% 100%, 0 100%, 0 17%); /* Angepasste clip-path */
+    overflow: hidden;
 }
 
 /* Bereich innerhalb des Clip-Pfades */
@@ -203,6 +204,7 @@ li a {
     height: 100%;
     background-color: rgb(163, 194, 141); /* Farbe für den inneren Bereich */
     clip-path: polygon(50% 35%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    z-index: -1;
 }
 .centered-link {
     position: relative; /* Ändern Sie die Position auf relativ */
@@ -238,6 +240,27 @@ li a {
 }
 
 
+/* Bild im Hintergrund */
+.color-divider img {
+    position: absolute;
+    top: 40%;
+    left: 17%;
+    width: 20%; /* 100% der Breite des Elternelements */
+    height: 50%; /* Volle Höhe des Elternelements */
+    object-fit: cover; /* Skaliert das Bild, um das Elternelement zu füllen */
+    z-index: 1; /* Stellt sicher, dass das Bild im Hintergrund liegt */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Schatten rechts und unten */
+}
 
-
-
+/* Stil für den Paragraphen */
+.color-divider p {
+    position: absolute;
+    top: 50%; /* Zentriert den Paragraphen vertikal */
+    left: 45%; /* 5% Abstand zwischen Bild und Paragraph */
+    transform: translateY(-50%); /* Zentriert den Paragraphen vertikal */
+    color: white;
+    font-size: 14px;
+    font-family: calibri;
+    max-width: 40%; /* Begrenzt die Breite des Paragraphen */
+    z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
+}
