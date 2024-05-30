@@ -1,35 +1,36 @@
+/* Stil für die Navigationsleiste */
 .navbar{
     background: white;
     font-family: calibri;
     padding-right: 15px;
     padding-left: 15px;
 }
-
+/* Flexbox-Einstellungen für die Navigation */
 .navdiv{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+/* Stil für das Logo */
 .logo a{
     font-size: 12px;
     font-weight: 600;
     color: black;
     font-weight: bolder;
 }
-
+/* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
 li{
     list-style: none;
     display: inline-block;
 }
-
+/* Stil für die Navigationslinks */
 li a{
     color: rgb(71, 71, 71);
     font-size: 10px;
     margin-right: 25px;
     text-decoration: none;
 }
-
+/* Container für den Hauptinhalt, zentriert mit Flexbox */
 .container {
     display: flex;
     justify-content: center;
@@ -38,20 +39,66 @@ li a{
     height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
     padding: 65px;
     box-sizing: border-box;
-  }
-
-  #einleitung {
+}
+/* Stil für die Einleitung */
+#einleitung {
     font-family: calibri;
     color: rgb(71, 71, 71);
     max-width: 80%;
     text-align: center;
-  }
+}
 
-  .arrow {
-    
+/* Stil für den Pfeil nach unten */
+.arrow {
     font-size: 1em; /* Größe des Pfeils */
     margin-top: 60px; /* Abstand zum Paragraphen */
     color: rgb(71, 71, 71);
     justify-content: center;
     align-items: center;
-  }
+}
+
+/* Hintergrundfarbe für die erste Seite */
+.first-section {
+    background-color: white;
+}
+
+/* Hintergrundfarbe für die zweite Seite */
+.second-section {
+    background-color: #b0cdd3; /* Blass hellblau */
+    width: 100%; /* Volle Breite des Bildschirms */
+    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 65px;
+    box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
+    color: rgb(71, 71, 71);
+    font-family: Calibri;
+    position: relative;
+}
+/* Stil für den "FOKUS"-Text in der zweiten Seite */
+.second-section #focus-text {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+}
+
+/* Stil für die Paragraphen auf der zweiten Seite */
+.section-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.section-two .paragraph {
+    margin: 0 20px; /* Abstand zwischen den Paragraphen */
+    text-align: center;
+    max-width: 30%;
+}
