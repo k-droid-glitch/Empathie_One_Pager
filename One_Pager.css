@@ -126,7 +126,7 @@ li a {
     z-index: 1; /* Stellen Sie sicher, dass die Kreise über dem Hintergrund liegen */
 }
 #circle1 {
-    bottom: -10px;
+    bottom: -23px;
 }
 #circle2 {
     bottom: -28px;
@@ -147,7 +147,7 @@ li a {
     position: relative; /* Position relativ zum Elternelement */
 }
 #paragraph_circle1{
-    bottom: -40px;
+    bottom: -55px;
 }
 #paragraph_circle2{
     bottom: -58px;
