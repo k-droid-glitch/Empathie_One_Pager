@@ -53,11 +53,42 @@ li a {
 }
 /* Stil für den Pfeil nach unten */
 .arrow {
-    font-size: 1em; /* Größe des Pfeils */
-    margin-top: 60px; /* Abstand zum Paragraphen */
+    position: absolute;
+    margin-top: 210px; /* Abstand zum Paragraphen */
     color: rgb(71, 71, 71);
     justify-content: center;
     align-items: center;
+    transform: translate(-50%, -50%);
+}
+.arrow span{
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-bottom: 5px solid gray;
+    border-right: 5px solid gray;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -.4s;
+}
+
+@keyframes scroll{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
 }
 /* Hintergrundfarbe für die erste Seite */
 .first-section {
@@ -264,3 +295,4 @@ li a {
     max-width: 40%; /* Begrenzt die Breite des Paragraphen */
     z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
 }
+
