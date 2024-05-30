@@ -173,3 +173,71 @@ li a {
 .paragraph-container:last-child::after {
     display: none;
 }
+
+/* Stil für die dritte Sektion */
+.third-section {
+    position: relative; /* Damit das farbteilende Element relativ dazu positioniert werden kann */
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    height: 100vh; /* Höhe der Sektion */
+    overflow: hidden; /* Verhindert das Überlaufen der Farbteilung */
+}
+
+/* Farbteilendes Element */
+.color-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(50% 30%, 100% 20%, 100% 100%, 0 100%, 0 17%); /* Angepasste clip-path */
+}
+
+/* Bereich innerhalb des Clip-Pfades */
+.color-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(163, 194, 141); /* Farbe für den inneren Bereich */
+    clip-path: polygon(50% 35%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+}
+.centered-link {
+    position: relative; /* Ändern Sie die Position auf relativ */
+    display: block; /* Setzen Sie den Link auf Block */
+    margin: 0 auto; /* Zentrieren Sie horizontal */
+    text-align: center; /* Zentrieren Sie den Text */
+    color: rgb(163, 194, 141); /* Farbe des Links */
+    font-size: 12px; /* Größe des Links */
+    font-family: calibri;
+    margin-top: 50px; /* Passen Sie den oberen Abstand nach Bedarf an */
+}
+/* Stil für den horizontalen Textcontainer */
+.horizontal-text-container {
+    position: absolute;
+    top: 10px; /* Passt die Position der horizontalen Texte an */
+    right: 0; /* Passt die Position der horizontalen Texte an */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+}
+
+/* Stil für die vertikalen Texte */
+.vertical-text {
+    color: rgb(163, 194, 141);
+    font-size: 24px;
+    font-family: calibri;
+    font-weight: bold;
+    margin: 0 0.5px; /* Abstand zwischen den einzelnen Textteilen */
+    writing-mode: vertical-rl;
+    transform: rotate(0deg); /* Entfernt die Drehung */
+    transform-origin: top left; /* Setzt den Drehpunkt auf die obere linke Ecke */
+}
+
+
+
+
+
