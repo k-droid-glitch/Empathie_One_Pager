@@ -1,30 +1,30 @@
 /* Stil für die Navigationsleiste */
-.navbar{
+.navbar {
     background: white;
     font-family: calibri;
     padding-right: 15px;
     padding-left: 15px;
 }
 /* Flexbox-Einstellungen für die Navigation */
-.navdiv{
+.navdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 /* Stil für das Logo */
-.logo a{
+.logo a {
     font-size: 12px;
     font-weight: 600;
     color: black;
     font-weight: bolder;
 }
 /* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
-li{
+li {
     list-style: none;
     display: inline-block;
 }
 /* Stil für die Navigationslinks */
-li a{
+li a {
     color: rgb(71, 71, 71);
     font-size: 10px;
     margin-right: 25px;
@@ -47,7 +47,6 @@ li a{
     max-width: 80%;
     text-align: center;
 }
-
 /* Stil für den Pfeil nach unten */
 .arrow {
     font-size: 1em; /* Größe des Pfeils */
@@ -56,12 +55,10 @@ li a{
     justify-content: center;
     align-items: center;
 }
-
 /* Hintergrundfarbe für die erste Seite */
 .first-section {
     background-color: white;
 }
-
 /* Hintergrundfarbe für die zweite Seite */
 .second-section {
     background-color: #b0cdd3; /* Blass hellblau */
@@ -70,12 +67,11 @@ li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 65px;
     box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
     color: rgb(71, 71, 71);
     font-family: Calibri;
-    position: relative;
+    position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
 }
 /* Stil für den "FOKUS"-Text in der zweiten Seite */
 .second-section #focus-text {
@@ -85,20 +81,91 @@ li a{
     left: 0;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
-
 /* Stil für die Paragraphen auf der zweiten Seite */
-.section-two {
+.section-two .p_Elements {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 150%;
+    position: relative;
+}
+.paragraph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 20px; /* Abstand zwischen den Paragraphen */
 }
 .section-two .paragraph {
-    margin: 0 20px; /* Abstand zwischen den Paragraphen */
     text-align: center;
-    max-width: 30%;
+    color: white;
+    font-size: 10px;
+    font-family: calibri;
+    max-width: 200px;
+    margin-bottom: 20px; /*Abstand zum Kreis*/
+}
+/* Stil für die Kreise unter den Paragraphen */
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px; /* Fester Wert für die Positionierung der Kreise unterhalb der Paragraphen */
+    left: 50%; /* Horizontale Zentrierung */
+    transform: translateX(-50%); /* Zentrierung relativ zum Elternelement */
+    z-index: 1; /* Stellen Sie sicher, dass die Kreise über dem Hintergrund liegen */
+}
+#circle1 {
+    bottom: -10px;
+}
+#circle2 {
+    bottom: -28px;
+}
+#circle3{
+    bottom: -28px;
+}
+/* Zusaetzliche Stildefinitionen */
+.second-section .p_Elements {
+    margin-top: 50px; /* Platzierung des Containers unter dem FOKUS-Text */
+}
+.paragraph_circle {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: calibri;
+    margin-top: 20px; /* Abstand zwischen den Paragraphen und den Kreisen */
+    position: relative; /* Position relativ zum Elternelement */
+}
+#paragraph_circle1{
+    bottom: -40px;
+}
+#paragraph_circle2{
+    bottom: -58px;
+}
+#paragraph_circle3{
+    bottom: -58px;
+}
+
+/* Pfeile zwischen den Kreisen */
+.paragraph-container::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px); /* Vertikale Ausrichtung in der Mitte des Containers */
+    left: calc(100% + 10px); /* Position rechts vom Container */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid white; /* Pfeil nach rechts */
+}
+
+/* Ausblenden des Pfeils für das letzte .paragraph-container */
+.paragraph-container:last-child::after {
+    display: none;
 }
