@@ -362,9 +362,6 @@ li a {
 /* Fünfte Seite */
 .fifth-section {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 70px;
-    align-items: center;
     position: relative;
     background-color: rgb(223, 152, 152);
     height: 100vh;
@@ -382,6 +379,7 @@ li a {
     background-color: white; /* Hintergrundfarbe für die obere Hälfte */
     clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%); /* Angepasste clip-path */
     overflow: hidden;
+    z-index: 1;
 }
 
 /* Bereich innerhalb des Clip-Pfades */
@@ -395,3 +393,52 @@ li a {
     clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%);
     z-index: 1;
 }
+
+.catchphrase_container {
+    display: flex;
+    justify-content: flex-start; /* Positioniert den Inhalt oben */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+    flex-direction: column;
+    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    padding: 65px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+#catchphrase {
+    font-family: calibri;
+    font-size: 15px;
+    position: absolute;
+    top: 20px; /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
+    left: 200%; /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
+    transform: translateX(-50%);
+    text-align: center;
+    color: black;
+    z-index: 3; /* Stellen Sie sicher, dass die Catchphrase über anderen Elementen liegt */
+    white-space: nowrap; /* Verhindert, dass der Text automatisch umbrochen wird */
+    word-wrap: break-word; /* Lässt den Text umgebrochen werden, wenn er nicht in das Container passt */
+}
+
+/* Stil für den "FOKUS"-Text in der zweiten Seite */
+.fifth-section #empathie-text {
+    color: black;
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    font-family: calibri;
+    color: rgb(223, 152, 152);
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 3; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+}
+
+
+
+
+
+
+
+
+
