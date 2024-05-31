@@ -295,4 +295,103 @@ li a {
     max-width: 40%; /* Begrenzt die Breite des Paragraphen */
     z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
 }
+/* Vierte Seite */
+.fourth-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    align-items: center;
+    position: relative;
+    background-color: rgb(233, 233, 233);
+    height: 100vh;
+    overflow: hidden;
+}
 
+
+/* Farbteilendes Element */
+.color-divider2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
+    overflow: hidden;
+}
+
+/* Bereich innerhalb des Clip-Pfades */
+.color-divider2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
+    z-index: 1;
+}
+/* CSS für die Links in der vierten Sektion */
+.fourth-section a {
+    font-family: calibri;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 30px; /* Abstand zwischen den Links */
+  }
+  
+  /* CSS für die Paragraphen in der vierten Sektion */
+.fourth-section p {
+    font-family: calibri;
+    margin-bottom: 7px; /* Abstand zwischen den Paragraphen */
+  }
+
+#heading{
+    position: absolute;
+    font-size: 35px;
+    font-family: calibri;
+    font-weight: bolder;
+    color: white;
+    top: 235px; /* Passt die Position der horizontalen Texte an */
+    right: 150px; /* Passt die Position der horizontalen Texte an */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    transform: rotate(11deg);
+}
+/* Fünfte Seite */
+.fifth-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    align-items: center;
+    position: relative;
+    background-color: rgb(223, 152, 152);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Farbteilendes Element */
+.color-divider3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%); /* Angepasste clip-path */
+    overflow: hidden;
+}
+
+/* Bereich innerhalb des Clip-Pfades */
+.color-divider3::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255); /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%);
+    z-index: 1;
+}
