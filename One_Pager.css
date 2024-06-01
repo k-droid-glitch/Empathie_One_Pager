@@ -334,6 +334,7 @@ li a {
 }
 /* CSS für die Links in der vierten Sektion */
 .fourth-section a {
+    color: black;
     font-family: calibri;
     font-weight: bold;
     text-decoration: none;
@@ -468,8 +469,69 @@ li a {
     margin-bottom: 0px; /* Abstand zwischen den Paragraphen */
   }
 
+/* Sechste Seite */
+.sixth-section {
+    display: flex;
+    position: relative;
+    background-color: rgb(236, 233, 233);
+    height: 100vh;
+    overflow: hidden;
+}
+/* Farbteilendes Element */
+.color-divider4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%); /* Angepasste clip-path */
+    overflow: hidden;
+    z-index: 1;
+}
 
+/* Bereich innerhalb des Clip-Pfades */
+.color-divider4::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%);
+    z-index: 1;
+}
+.summary_container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px; /* Abstand vom Text zum linken Rand */
+    margin-right: 70px; /* Abstand vom Text zum rechten Rand */
+}
+#summary{
+    font-family: calibri;
+    font-size: 15px;
+}
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: calibri;
+    margin-bottom: 30px;
+    background-color: rgb(236, 233, 233);
+}
 
+#copyright {
+    font-size: 11px;
+    font-weight: 600;
+    color: black;
+    font-weight: bold;
+    margin-left: 100px;
 
+}
+.impressum_datenschutz{
+    font-size: 10px;
+    color: black;
+    display: inline-block;
+}
 
