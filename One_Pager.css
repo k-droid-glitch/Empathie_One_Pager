@@ -17,7 +17,7 @@ body{
 }
 /* Stil für das Logo */
 .logo a {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: black;
     font-weight: bolder;
@@ -30,7 +30,7 @@ li {
 /* Stil für die Navigationslinks */
 li a {
     color: rgb(71, 71, 71);
-    font-size: 10px;
+    font-size: 11px;
     margin-right: 25px;
     text-decoration: none;
 }
@@ -297,6 +297,7 @@ li a {
 }
 /* Vierte Seite */
 .fourth-section {
+    text-align: right;
     display: flex;
     justify-content: flex-end;
     padding-right: 70px;
@@ -407,10 +408,10 @@ li a {
 }
 #catchphrase {
     font-family: calibri;
-    font-size: 15px;
+    font-size: 17px;
     position: absolute;
     top: 20px; /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
-    left: 200%; /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
+    left: 170%; /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
     transform: translateX(-50%);
     text-align: center;
     color: black;
@@ -419,8 +420,8 @@ li a {
     word-wrap: break-word; /* Lässt den Text umgebrochen werden, wenn er nicht in das Container passt */
 }
 
-/* Stil für den "FOKUS"-Text in der zweiten Seite */
-.fifth-section #empathie-text {
+/* Stil für den "EMPATHIE"-Text in der zweiten Seite */
+#empathie-text {
     color: black;
     position: absolute;
     top: 50px;
@@ -433,9 +434,39 @@ li a {
     font-weight: bold;
     z-index: 3; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
+#hilfestellung {
+    color: white;
+    font-size: 17px;
+    font-family: calibri;
+    position: relative;
+    top: 230px;
+    text-align: left;
+    left: auto;
+    font-family: calibri;
+    z-index: 3;
+}
+.tipps{
+    font-family: calibri;
+    font-size: 15px;
+    color: white;
+    position: relative;
+    text-align: right;
+    top: 140px;
+    left: 190px;
+    z-index: 3;
 
-
-
+}
+/* CSS für die Links in der Fünften Sektion */
+.tipp {
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0px; /* Abstand zwischen den Links */
+  }
+  
+  /* CSS für die Paragraphen in der Fünften Sektion */
+.tipp_description {
+    margin-bottom: 0px; /* Abstand zwischen den Paragraphen */
+  }
 
 
 
