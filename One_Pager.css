@@ -1,13 +1,32 @@
+/*  ================================================
+	Florian Siedl
+	Empathie-OnePager
+	Version: Flos_edits_v1.0 
+	================================================ */
+	
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Google Fonts */
+
 body{
     margin: 0;
     padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
+
+
 /* Stil für die Navigationsleiste */
 .navbar {
     background: white;
-    font-family: calibri;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-top: 35px;
+    padding-right: 50px;
+    padding-left: 50px;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+
 }
 /* Flexbox-Einstellungen für die Navigation */
 .navdiv {
@@ -15,13 +34,8 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-/* Stil für das Logo */
-.logo a {
-    font-size: 15px;
-    font-weight: 600;
-    color: black;
-    font-weight: bolder;
-}
+
+
 /* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
 li {
     list-style: none;
@@ -34,6 +48,13 @@ li a {
     margin-right: 25px;
     text-decoration: none;
 }
+
+/* Stil für Mouseover der Navigationslinks */
+li a:hover {
+	border-bottom: 1px solid;
+}
+
+
 /* Container für den Hauptinhalt, zentriert mit Flexbox */
 .container {
     display: flex;
@@ -46,7 +67,12 @@ li a {
 }
 /* Stil für die Einleitung */
 #einleitung {
-    font-family: calibri;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: 4vw;
+	font-size: 3vmax;
+	font-weight: 400;
+	font-style: normal;
     color: rgb(71, 71, 71);
     max-width: 80%;
     text-align: center;
@@ -54,8 +80,8 @@ li a {
 /* Stil für den Pfeil nach unten */
 .arrow {
     position: absolute;
-    margin-top: 210px; /* Abstand zum Paragraphen */
-    color: rgb(71, 71, 71);
+    margin-top: 420px; /* Abstand zum Paragraphen */
+    color: #F4F1EE;
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);
@@ -90,13 +116,36 @@ li a {
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
+
+
+
+/* Elemente – Hand-Grafiken */
+
+
+.blue-hand {
+    position: absolute;
+    margin-top: 980px; 
+    z-index: 10;
+	justify-content: left;
+}
+
+
+.green-hand {
+	display: flex;
+    position: absolute;
+    margin-top: 60px;
+    z-index: 100;
+}
+
+
+
 /* Hintergrundfarbe für die erste Seite */
 .first-section {
     background-color: white;
 }
 /* Hintergrundfarbe für die zweite Seite */
 .second-section {
-    background-color: #b0cdd3; /* Blass hellblau */
+    background-color: #ADCBD4; /* Blass hellblau */
     width: 100%; /* Volle Breite des Bildschirms */
     height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
     display: flex;
@@ -105,19 +154,22 @@ li a {
     padding: 65px;
     box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
     color: rgb(71, 71, 71);
-    font-family: Calibri;
+    font-family: "Montserrat", sans-serif;
     position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
 }
 /* Stil für den "FOKUS"-Text in der zweiten Seite */
 .second-section #focus-text {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: min(max(16px, 10vw), 80px);
+	font-weight: 660;
+    color: rgb(71, 71, 71);
     color: white;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 35px;
+    left: 30px;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    font-size: 24px;
-    font-weight: bold;
     z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
 /* Stil für die Paragraphen auf der zweiten Seite */
@@ -140,7 +192,7 @@ li a {
     text-align: center;
     color: white;
     font-size: 10px;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     max-width: 200px;
     margin-bottom: 20px; /*Abstand zum Kreis*/
 }
@@ -173,7 +225,7 @@ li a {
     color: white;
     font-size: 10px;
     font-weight: bold;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     margin-top: 20px; /* Abstand zwischen den Paragraphen und den Kreisen */
     position: relative; /* Position relativ zum Elternelement */
 }
@@ -233,7 +285,7 @@ li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(163, 194, 141); /* Farbe für den inneren Bereich */
+    background-color: #B3C595; /* Farbe für den inneren Bereich */
     clip-path: polygon(50% 35%, 100% 20%, 100% 100%, 0 100%, 0 20%);
     z-index: -1;
 }
@@ -243,8 +295,9 @@ li a {
     margin: 0 auto; /* Zentrieren Sie horizontal */
     text-align: center; /* Zentrieren Sie den Text */
     color: rgb(163, 194, 141); /* Farbe des Links */
-    font-size: 12px; /* Größe des Links */
-    font-family: calibri;
+	font-size: min(max(16px, 3vw), 24px); /* Größe des Links */
+    font-family: "Montserrat", sans-serif;
+	font-style: italic;
     margin-top: 50px; /* Passen Sie den oberen Abstand nach Bedarf an */
 }
 /* Stil für den horizontalen Textcontainer */
@@ -260,11 +313,14 @@ li a {
 
 /* Stil für die vertikalen Texte */
 .vertical-text {
-    color: rgb(163, 194, 141);
-    font-size: 24px;
-    font-family: calibri;
-    font-weight: bold;
-    margin: 0 0.5px; /* Abstand zwischen den einzelnen Textteilen */
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: min(max(16px, 10vw), 80px);
+	font-weight: 660;
+    color: #B3C595;
+    top: 35px;
+    right: 40px;
+    margin: 0 0.1px; /* Abstand zwischen den einzelnen Textteilen */
     writing-mode: vertical-rl;
     transform: rotate(0deg); /* Entfernt die Drehung */
     transform-origin: top left; /* Setzt den Drehpunkt auf die obere linke Ecke */
@@ -291,7 +347,7 @@ li a {
     transform: translateY(-50%); /* Zentriert den Paragraphen vertikal */
     color: white;
     font-size: 14px;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     max-width: 40%; /* Begrenzt die Breite des Paragraphen */
     z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
 }
@@ -335,7 +391,7 @@ li a {
 /* CSS für die Links in der vierten Sektion */
 .fourth-section a {
     color: black;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 30px; /* Abstand zwischen den Links */
@@ -343,15 +399,16 @@ li a {
   
   /* CSS für die Paragraphen in der vierten Sektion */
 .fourth-section p {
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 7px; /* Abstand zwischen den Paragraphen */
   }
 
 #heading{
     position: absolute;
-    font-size: 35px;
-    font-family: calibri;
-    font-weight: bolder;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: min(max(16px, 10vw), 80px);
+	font-weight: 660;
     color: white;
     top: 235px; /* Passt die Position der horizontalen Texte an */
     right: 150px; /* Passt die Position der horizontalen Texte an */
@@ -408,7 +465,7 @@ li a {
     z-index: 2;
 }
 #catchphrase {
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     font-size: 17px;
     position: absolute;
     top: 20px; /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
@@ -423,31 +480,32 @@ li a {
 
 /* Stil für den "EMPATHIE"-Text in der zweiten Seite */
 #empathie-text {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: min(max(16px, 10vw), 80px);
+	font-weight: 660;
     color: black;
     position: absolute;
-    top: 50px;
-    left: -6px;
-    font-family: calibri;
+    top: 35px;
+    left: 30px;
     color: rgb(223, 152, 152);
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    font-size: 30px;
-    font-weight: bold;
     z-index: 3; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
 #hilfestellung {
     color: white;
     font-size: 17px;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     position: relative;
     top: 230px;
     text-align: left;
     left: auto;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     z-index: 3;
 }
 .tipps{
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     color: white;
     position: relative;
@@ -508,7 +566,7 @@ li a {
     margin-right: 70px; /* Abstand vom Text zum rechten Rand */
 }
 #summary{
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
 }
 
@@ -516,7 +574,7 @@ li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: calibri;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 30px;
     background-color: rgb(236, 233, 233);
 }
