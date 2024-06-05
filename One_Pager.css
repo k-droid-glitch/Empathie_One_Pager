@@ -1,17 +1,11 @@
-/*  ================================================
-	Florian Siedl
-	Empathie-OnePager
-	Version: Flos_edits_v1.0 
-	================================================ */
-	
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Google Fonts */
 
-body{
+body {
     margin: 0;
     padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -22,12 +16,13 @@ body{
     padding-top: 35px;
     padding-right: 50px;
     padding-left: 50px;
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
 }
+
 /* Flexbox-Einstellungen für die Navigation */
 .navdiv {
     display: flex;
@@ -41,6 +36,7 @@ li {
     list-style: none;
     display: inline-block;
 }
+
 /* Stil für die Navigationslinks */
 li a {
     color: rgb(71, 71, 71);
@@ -51,7 +47,7 @@ li a {
 
 /* Stil für Mouseover der Navigationslinks */
 li a:hover {
-	border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
 
 
@@ -61,32 +57,37 @@ li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    height: 100vh;
+    /* 100% der Höhe des sichtbaren Bereichs */
     padding: 65px;
     box-sizing: border-box;
 }
+
 /* Stil für die Einleitung */
 #einleitung {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: 4vw;
-	font-size: 3vmax;
-	font-weight: 400;
-	font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 4vw;
+    font-size: 3vmax;
+    font-weight: 400;
+    font-style: normal;
     color: rgb(71, 71, 71);
     max-width: 80%;
     text-align: center;
 }
+
 /* Stil für den Pfeil nach unten */
 .arrow {
     position: absolute;
-    margin-top: 420px; /* Abstand zum Paragraphen */
+    margin-top: 420px;
+    /* Abstand zum Paragraphen */
     color: #F4F1EE;
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);
 }
-.arrow span{
+
+.arrow span {
     display: block;
     width: 5px;
     height: 5px;
@@ -96,22 +97,26 @@ li a:hover {
     margin: -10px;
     animation: scroll 2s infinite;
 }
-.arrow span:nth-child(2){
+
+.arrow span:nth-child(2) {
     animation-delay: -.2s;
 }
-.arrow span:nth-child(3){
+
+.arrow span:nth-child(3) {
     animation-delay: -.4s;
 }
 
-@keyframes scroll{
-    0%{
+@keyframes scroll {
+    0% {
         opacity: 0;
         transform: rotate(45deg) translate(-20px, -20px);
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
     }
@@ -124,14 +129,14 @@ li a:hover {
 
 .blue-hand {
     position: absolute;
-    margin-top: 980px; 
+    margin-top: 980px;
     z-index: 10;
-	justify-content: left;
+    justify-content: left;
 }
 
 
 .green-hand {
-	display: flex;
+    display: flex;
     position: absolute;
     margin-top: 60px;
     z-index: 100;
@@ -143,26 +148,33 @@ li a:hover {
 .first-section {
     background-color: white;
 }
+
 /* Hintergrundfarbe für die zweite Seite */
 .second-section {
-    background-color: #ADCBD4; /* Blass hellblau */
-    width: 100%; /* Volle Breite des Bildschirms */
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    background-color: #ADCBD4;
+    /* Blass hellblau */
+    width: 100%;
+    /* Volle Breite des Bildschirms */
+    height: 100vh;
+    /* 100% der Höhe des sichtbaren Bereichs */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 65px;
-    box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
+    box-sizing: border-box;
+    /* Berücksichtigt Padding in den Gesamtabmessungen */
     color: rgb(71, 71, 71);
     font-family: "Montserrat", sans-serif;
-    position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
+    position: relative;
+    /* Damit der FOKUS-Text absolut positioniert werden kann */
 }
+
 /* Stil für den "FOKUS"-Text in der zweiten Seite */
 .second-section #focus-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(max(16px, 10vw), 80px);
+    font-weight: 660;
     color: rgb(71, 71, 71);
     color: white;
     position: absolute;
@@ -170,8 +182,10 @@ li a:hover {
     left: 30px;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    z-index: 1;
+    /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
+
 /* Stil für die Paragraphen auf der zweiten Seite */
 .section-two .p_Elements {
     display: flex;
@@ -181,21 +195,26 @@ li a:hover {
     height: 150%;
     position: relative;
 }
+
 .paragraph-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 20px; /* Abstand zwischen den Paragraphen */
+    margin: 0 20px;
+    /* Abstand zwischen den Paragraphen */
 }
+
 .section-two .paragraph {
     text-align: center;
     color: white;
     font-size: 10px;
     font-family: "Montserrat", sans-serif;
     max-width: 200px;
-    margin-bottom: 20px; /*Abstand zum Kreis*/
+    margin-bottom: 20px;
+    /*Abstand zum Kreis*/
 }
+
 /* Stil für die Kreise unter den Paragraphen */
 .circle {
     width: 50px;
@@ -203,39 +222,54 @@ li a:hover {
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    bottom: -70px; /* Fester Wert für die Positionierung der Kreise unterhalb der Paragraphen */
-    left: 50%; /* Horizontale Zentrierung */
-    transform: translateX(-50%); /* Zentrierung relativ zum Elternelement */
-    z-index: 1; /* Stellen Sie sicher, dass die Kreise über dem Hintergrund liegen */
+    bottom: -70px;
+    /* Fester Wert für die Positionierung der Kreise unterhalb der Paragraphen */
+    left: 50%;
+    /* Horizontale Zentrierung */
+    transform: translateX(-50%);
+    /* Zentrierung relativ zum Elternelement */
+    z-index: 1;
+    /* Stellen Sie sicher, dass die Kreise über dem Hintergrund liegen */
 }
+
 #circle1 {
     bottom: -23px;
 }
+
 #circle2 {
     bottom: -28px;
 }
-#circle3{
+
+#circle3 {
     bottom: -28px;
 }
+
 /* Zusaetzliche Stildefinitionen */
 .second-section .p_Elements {
-    margin-top: 50px; /* Platzierung des Containers unter dem FOKUS-Text */
+    margin-top: 50px;
+    /* Platzierung des Containers unter dem FOKUS-Text */
 }
+
 .paragraph_circle {
     color: white;
     font-size: 10px;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
-    margin-top: 20px; /* Abstand zwischen den Paragraphen und den Kreisen */
-    position: relative; /* Position relativ zum Elternelement */
+    margin-top: 20px;
+    /* Abstand zwischen den Paragraphen und den Kreisen */
+    position: relative;
+    /* Position relativ zum Elternelement */
 }
-#paragraph_circle1{
+
+#paragraph_circle1 {
     bottom: -55px;
 }
-#paragraph_circle2{
+
+#paragraph_circle2 {
     bottom: -58px;
 }
-#paragraph_circle3{
+
+#paragraph_circle3 {
     bottom: -58px;
 }
 
@@ -243,13 +277,16 @@ li a:hover {
 .paragraph-container::after {
     content: '';
     position: absolute;
-    top: calc(50% - 5px); /* Vertikale Ausrichtung in der Mitte des Containers */
-    left: calc(100% + 10px); /* Position rechts vom Container */
+    top: calc(50% - 5px);
+    /* Vertikale Ausrichtung in der Mitte des Containers */
+    left: calc(100% + 10px);
+    /* Position rechts vom Container */
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 5px solid white; /* Pfeil nach rechts */
+    border-left: 5px solid white;
+    /* Pfeil nach rechts */
 }
 
 /* Ausblenden des Pfeils für das letzte .paragraph-container */
@@ -259,10 +296,14 @@ li a:hover {
 
 /* Stil für die dritte Sektion */
 .third-section {
-    position: relative; /* Damit das farbteilende Element relativ dazu positioniert werden kann */
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    height: 100vh; /* Höhe der Sektion */
-    overflow: hidden; /* Verhindert das Überlaufen der Farbteilung */
+    position: relative;
+    /* Damit das farbteilende Element relativ dazu positioniert werden kann */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    height: 100vh;
+    /* Höhe der Sektion */
+    overflow: hidden;
+    /* Verhindert das Überlaufen der Farbteilung */
 }
 
 /* Farbteilendes Element */
@@ -272,8 +313,10 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(50% 30%, 100% 20%, 100% 100%, 0 100%, 0 17%); /* Angepasste clip-path */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(50% 30%, 100% 20%, 100% 100%, 0 100%, 0 17%);
+    /* Angepasste clip-path */
     overflow: hidden;
 }
 
@@ -285,45 +328,61 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #B3C595; /* Farbe für den inneren Bereich */
+    background-color: #B3C595;
+    /* Farbe für den inneren Bereich */
     clip-path: polygon(50% 35%, 100% 20%, 100% 100%, 0 100%, 0 20%);
     z-index: -1;
 }
+
 .centered-link {
-    position: relative; /* Ändern Sie die Position auf relativ */
-    display: block; /* Setzen Sie den Link auf Block */
-    margin: 0 auto; /* Zentrieren Sie horizontal */
-    text-align: center; /* Zentrieren Sie den Text */
-    color: rgb(163, 194, 141); /* Farbe des Links */
-	font-size: min(max(16px, 3vw), 24px); /* Größe des Links */
+    position: relative;
+    /* Ändern Sie die Position auf relativ */
+    display: block;
+    /* Setzen Sie den Link auf Block */
+    margin: 0 auto;
+    /* Zentrieren Sie horizontal */
+    text-align: center;
+    /* Zentrieren Sie den Text */
+    color: rgb(163, 194, 141);
+    /* Farbe des Links */
+    font-size: min(max(16px, 3vw), 24px);
+    /* Größe des Links */
     font-family: "Montserrat", sans-serif;
-	font-style: italic;
-    margin-top: 50px; /* Passen Sie den oberen Abstand nach Bedarf an */
+    font-style: italic;
+    margin-top: 50px;
+    /* Passen Sie den oberen Abstand nach Bedarf an */
 }
+
 /* Stil für den horizontalen Textcontainer */
 .horizontal-text-container {
     position: absolute;
-    top: 10px; /* Passt die Position der horizontalen Texte an */
-    right: 0; /* Passt die Position der horizontalen Texte an */
+    top: 10px;
+    /* Passt die Position der horizontalen Texte an */
+    right: 0;
+    /* Passt die Position der horizontalen Texte an */
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    z-index: 1;
+    /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
 
 /* Stil für die vertikalen Texte */
 .vertical-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(max(16px, 10vw), 80px);
+    font-weight: 660;
     color: #B3C595;
     top: 35px;
     right: 40px;
-    margin: 0 0.1px; /* Abstand zwischen den einzelnen Textteilen */
+    margin: 0 0.1px;
+    /* Abstand zwischen den einzelnen Textteilen */
     writing-mode: vertical-rl;
-    transform: rotate(0deg); /* Entfernt die Drehung */
-    transform-origin: top left; /* Setzt den Drehpunkt auf die obere linke Ecke */
+    transform: rotate(0deg);
+    /* Entfernt die Drehung */
+    transform-origin: top left;
+    /* Setzt den Drehpunkt auf die obere linke Ecke */
 }
 
 
@@ -332,25 +391,36 @@ li a:hover {
     position: absolute;
     top: 40%;
     left: 17%;
-    width: 20%; /* 100% der Breite des Elternelements */
-    height: 50%; /* Volle Höhe des Elternelements */
-    object-fit: cover; /* Skaliert das Bild, um das Elternelement zu füllen */
-    z-index: 1; /* Stellt sicher, dass das Bild im Hintergrund liegt */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Schatten rechts und unten */
+    width: 20%;
+    /* 100% der Breite des Elternelements */
+    height: 50%;
+    /* Volle Höhe des Elternelements */
+    object-fit: cover;
+    /* Skaliert das Bild, um das Elternelement zu füllen */
+    z-index: 1;
+    /* Stellt sicher, dass das Bild im Hintergrund liegt */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    /* Schatten rechts und unten */
 }
 
 /* Stil für den Paragraphen */
 .color-divider p {
     position: absolute;
-    top: 50%; /* Zentriert den Paragraphen vertikal */
-    left: 45%; /* 5% Abstand zwischen Bild und Paragraph */
-    transform: translateY(-50%); /* Zentriert den Paragraphen vertikal */
+    top: 50%;
+    /* Zentriert den Paragraphen vertikal */
+    left: 45%;
+    /* 5% Abstand zwischen Bild und Paragraph */
+    transform: translateY(-50%);
+    /* Zentriert den Paragraphen vertikal */
     color: white;
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
-    max-width: 40%; /* Begrenzt die Breite des Paragraphen */
-    z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
+    max-width: 40%;
+    /* Begrenzt die Breite des Paragraphen */
+    z-index: 1;
+    /* Stellt sicher, dass der Paragraph über dem Bild liegt */
 }
+
 /* Vierte Seite */
 .fourth-section {
     text-align: right;
@@ -372,8 +442,10 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%);
+    /* Angepasste clip-path */
     overflow: hidden;
 }
 
@@ -384,40 +456,49 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%);
+    /* Angepasste clip-path */
     z-index: 1;
 }
+
 /* CSS für die Links in der vierten Sektion */
 .fourth-section a {
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 30px; /* Abstand zwischen den Links */
-  }
-  
-  /* CSS für die Paragraphen in der vierten Sektion */
+    margin-bottom: 30px;
+    /* Abstand zwischen den Links */
+}
+
+/* CSS für die Paragraphen in der vierten Sektion */
 .fourth-section p {
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 7px; /* Abstand zwischen den Paragraphen */
-  }
+    margin-bottom: 7px;
+    /* Abstand zwischen den Paragraphen */
+}
 
-#heading{
+#heading {
     position: absolute;
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(max(16px, 10vw), 80px);
+    font-weight: 660;
     color: white;
-    top: 235px; /* Passt die Position der horizontalen Texte an */
-    right: 150px; /* Passt die Position der horizontalen Texte an */
+    top: 235px;
+    /* Passt die Position der horizontalen Texte an */
+    right: 150px;
+    /* Passt die Position der horizontalen Texte an */
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    z-index: 1;
+    /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
     transform: rotate(11deg);
 }
+
 /* Fünfte Seite */
 .fifth-section {
     display: flex;
@@ -435,8 +516,10 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%); /* Angepasste clip-path */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%);
+    /* Angepasste clip-path */
     overflow: hidden;
     z-index: 1;
 }
@@ -448,42 +531,52 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255); /* Hintergrundfarbe für die obere Hälfte */
+    background-color: rgb(255, 255, 255);
+    /* Hintergrundfarbe für die obere Hälfte */
     clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%);
     z-index: 1;
 }
 
 .catchphrase_container {
     display: flex;
-    justify-content: flex-start; /* Positioniert den Inhalt oben */
-    align-items: center; /* Zentriert den Inhalt horizontal */
+    justify-content: flex-start;
+    /* Positioniert den Inhalt oben */
+    align-items: center;
+    /* Zentriert den Inhalt horizontal */
     flex-direction: column;
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+    height: 100vh;
+    /* 100% der Höhe des sichtbaren Bereichs */
     padding: 65px;
     box-sizing: border-box;
     position: relative;
     z-index: 2;
 }
+
 #catchphrase {
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
     position: absolute;
-    top: 20px; /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
-    left: 170%; /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
+    top: 20px;
+    /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
+    left: 170%;
+    /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
     transform: translateX(-50%);
     text-align: center;
     color: black;
-    z-index: 3; /* Stellen Sie sicher, dass die Catchphrase über anderen Elementen liegt */
-    white-space: nowrap; /* Verhindert, dass der Text automatisch umbrochen wird */
-    word-wrap: break-word; /* Lässt den Text umgebrochen werden, wenn er nicht in das Container passt */
+    z-index: 3;
+    /* Stellen Sie sicher, dass die Catchphrase über anderen Elementen liegt */
+    white-space: nowrap;
+    /* Verhindert, dass der Text automatisch umbrochen wird */
+    word-wrap: break-word;
+    /* Lässt den Text umgebrochen werden, wenn er nicht in das Container passt */
 }
 
 /* Stil für den "EMPATHIE"-Text in der zweiten Seite */
 #empathie-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(max(16px, 10vw), 80px);
+    font-weight: 660;
     color: black;
     position: absolute;
     top: 35px;
@@ -491,8 +584,10 @@ li a:hover {
     color: rgb(223, 152, 152);
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    z-index: 3; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    z-index: 3;
+    /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
+
 #hilfestellung {
     color: white;
     font-size: 17px;
@@ -504,7 +599,8 @@ li a:hover {
     font-family: "Montserrat", sans-serif;
     z-index: 3;
 }
-.tipps{
+
+.tipps {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     color: white;
@@ -515,17 +611,20 @@ li a:hover {
     z-index: 3;
 
 }
+
 /* CSS für die Links in der Fünften Sektion */
 .tipp {
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 0px; /* Abstand zwischen den Links */
-  }
-  
-  /* CSS für die Paragraphen in der Fünften Sektion */
+    margin-bottom: 0px;
+    /* Abstand zwischen den Links */
+}
+
+/* CSS für die Paragraphen in der Fünften Sektion */
 .tipp_description {
-    margin-bottom: 0px; /* Abstand zwischen den Paragraphen */
-  }
+    margin-bottom: 0px;
+    /* Abstand zwischen den Paragraphen */
+}
 
 /* Sechste Seite */
 .sixth-section {
@@ -535,6 +634,7 @@ li a:hover {
     height: 100vh;
     overflow: hidden;
 }
+
 /* Farbteilendes Element */
 .color-divider4 {
     position: absolute;
@@ -542,8 +642,10 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%); /* Angepasste clip-path */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
+    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%);
+    /* Angepasste clip-path */
     overflow: hidden;
     z-index: 1;
 }
@@ -555,17 +657,22 @@ li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
+    background-color: white;
+    /* Hintergrundfarbe für die obere Hälfte */
     clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%);
     z-index: 1;
 }
-.summary_container{
+
+.summary_container {
     display: flex;
     justify-content: flex-start;
-    margin-left: 70px; /* Abstand vom Text zum linken Rand */
-    margin-right: 70px; /* Abstand vom Text zum rechten Rand */
+    margin-left: 70px;
+    /* Abstand vom Text zum linken Rand */
+    margin-right: 70px;
+    /* Abstand vom Text zum rechten Rand */
 }
-#summary{
+
+#summary {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
 }
@@ -575,21 +682,27 @@ li a:hover {
     align-items: center;
     justify-content: space-between;
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 30px;
-    background-color: rgb(236, 233, 233);
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
 }
 
 #copyright {
     font-size: 11px;
-    font-weight: 600;
-    color: black;
     font-weight: bold;
+    color: rgb(71, 71, 71);
     margin-left: 100px;
-
 }
-.impressum_datenschutz{
+
+.impressum_datenschutz {
     font-size: 10px;
-    color: black;
+    color: rgb(71, 71, 71);
     display: inline-block;
+    text-decoration: none;
+    margin-right: 25px;
 }
 
+.impressum_datenschutz:hover {
+    text-decoration: none;
+}
