@@ -91,6 +91,8 @@ footer strong {
     padding: 20px;
     font-family: "Montserrat", sans-serif; /* Schriftart */
     color: rgb(71, 71, 71); /* Schriftfarbe */
+padding-right: 15%;
+padding-left: 15%;
 }
 
 .content-center h1,
@@ -108,4 +110,12 @@ footer strong {
 /* Stil für Mouseover von Links im zentralen Inhalt */
 .content-center a:hover {
     border-bottom: 1px solid;
+}
+
+.content-center p {
+font-size: 12px;
+}
+
+.content-center h2 {
+font-size: 22px;
 }
