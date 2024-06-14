@@ -156,7 +156,7 @@
     
     /* Hintergrundfarbe für die zweite Seite */
     .second-section {
-        background-color: #ADCBD4; /* Blass hellblau */
+        background-color: #accbd4; /* Blass hellblau */
         width: 100%; /* Volle Breite des Bildschirms */
         height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
         display: flex;
@@ -279,7 +279,7 @@
 
 /* Stil für die dritte Sektion */
 .third-section {
-    background-color: #D49792; /* Farbe passend zur dritten Sektion */
+    background-color: #dd9e9c; /* Farbe passend zur dritten Sektion */
     width: 100%;
     padding: 65px;
     box-sizing: border-box;
@@ -310,7 +310,7 @@
 .third-section .task-box {
     display: flex;
     align-items: center;
-    background: #F8DAD5;
+    background: #e6b5b3;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -353,247 +353,114 @@
         margin-bottom: 10px;
     }
 }
-
-
-/* Vierte Seite */
+/* Stil für die vierte Sektion */
 .fourth-section {
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 70px;
-    align-items: center;
-    position: relative;
-    background-color: rgb(233, 233, 233);
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-/* Farbteilendes Element */
-.color-divider2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: #b4c696; /* Farbe passend zur vierten Sektion */
     width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
-    overflow: hidden;
-}
-
-/* Bereich innerhalb des Clip-Pfades */
-.color-divider2::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 55%); /* Angepasste clip-path */
-    z-index: 1;
-}
-/* CSS für die Links in der vierten Sektion */
-.fourth-section a {
-    color: black;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 30px; /* Abstand zwischen den Links */
-  }
-  
-  /* CSS für die Paragraphen in der vierten Sektion */
-.fourth-section p {
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 7px; /* Abstand zwischen den Paragraphen */
-  }
-
-#heading{
-    position: absolute;
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
-    color: white;
-    top: 235px; /* Passt die Position der horizontalen Texte an */
-    right: 150px; /* Passt die Position der horizontalen Texte an */
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
-    transform: rotate(11deg);
-}
-/* Fünfte Seite */
-.fifth-section {
-    display: flex;
-    position: relative;
-    background-color: rgb(223, 152, 152);
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-/* Farbteilendes Element */
-.color-divider3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%); /* Angepasste clip-path */
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* Bereich innerhalb des Clip-Pfades */
-.color-divider3::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255); /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 55%);
-    z-index: 1;
-}
-
-.catchphrase_container {
-    display: flex;
-    justify-content: flex-start; /* Positioniert den Inhalt oben */
-    align-items: center; /* Zentriert den Inhalt horizontal */
-    flex-direction: column;
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
     padding: 65px;
     box-sizing: border-box;
-    position: relative;
-    z-index: 2;
-}
-#catchphrase {
+    color: rgb(71, 71, 71);
     font-family: "Montserrat", sans-serif;
-    font-size: 17px;
-    position: absolute;
-    top: 20px; /* Setzen Sie den Abstand nach oben, um den Umbruch zu erreichen */
-    left: 170%; /* Hier ändern Sie den linken Abstand, um den Text nach rechts zu verschieben */
-    transform: translateX(-50%);
-    text-align: center;
-    color: black;
-    z-index: 3; /* Stellen Sie sicher, dass die Catchphrase über anderen Elementen liegt */
-    white-space: nowrap; /* Verhindert, dass der Text automatisch umbrochen wird */
-    word-wrap: break-word; /* Lässt den Text umgebrochen werden, wenn er nicht in das Container passt */
+    position: relative;
 }
 
-/* Stil für den "EMPATHIE"-Text in der zweiten Seite */
-#empathie-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
-    color: black;
+.fourth-section .section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fourth-section #nutzliches-text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 55px;
+    font-weight: 660;
+    color: white;
     position: absolute;
-    top: 35px;
-    left: 30px;
-    color: rgb(223, 152, 152);
+    top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
-    z-index: 3; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
-#hilfestellung {
-    color: white;
-    font-size: 17px;
-    font-family: "Montserrat", sans-serif;
-    position: relative;
-    top: 230px;
-    text-align: left;
-    left: auto;
-    font-family: "Montserrat", sans-serif;
-    z-index: 3;
-}
-.tipps{
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    color: white;
-    position: relative;
-    text-align: right;
-    top: 140px;
-    left: 190px;
-    z-index: 3;
 
+.fourth-section .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
 }
-/* CSS für die Links in der Fünften Sektion */
-.tipp {
+
+.fourth-section .info-box {
+    background: #c6d2af;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.fourth-section .info-box p {
+    margin: 0 0 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: rgb(71, 71, 71);
+}
+
+.fourth-section .info-box a {
+    color: #000;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 0px; /* Abstand zwischen den Links */
-  }
-  
-  /* CSS für die Paragraphen in der Fünften Sektion */
-.tipp_description {
-    margin-bottom: 0px; /* Abstand zwischen den Paragraphen */
-  }
-
-/* Sechste Seite */
-.sixth-section {
-    display: flex;
-    position: relative;
-    background-color: rgb(236, 233, 233);
-    height: 100vh;
-    overflow: hidden;
-}
-/* Farbteilendes Element */
-.color-divider4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%); /* Angepasste clip-path */
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* Bereich innerhalb des Clip-Pfades */
-.color-divider4::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(0 100%, 100% 100%, 100% 30%, 0 30%);
-    z-index: 1;
-}
-.summary_container{
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 70px; /* Abstand vom Text zum linken Rand */
-    margin-right: 70px; /* Abstand vom Text zum rechten Rand */
-}
-#summary{
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
+    font-size: 1em;
 }
 
+.fourth-section .info-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styling */
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #F4F1EE;
+    padding: 20px 0;
+    text-align: center;
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 30px;
-    background-color: rgb(236, 233, 233);
+    color: rgb(71, 71, 71);
+    position: relative;
 }
 
-#copyright {
-    font-size: 11px;
-    font-weight: 600;
-    color: black;
-    font-weight: bold;
-    margin-left: 100px;
-
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.impressum_datenschutz{
-    font-size: 10px;
-    color: black;
-    display: inline-block;
+
+.footer-content span {
+    font-size: 0.9em;
+}
+
+.footer-content img {
+    height: 50px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: rgb(71, 71, 71);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
