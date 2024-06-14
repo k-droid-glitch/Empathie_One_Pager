@@ -4,351 +4,357 @@
 	Version: Flos_edits_v1.0 
 	================================================ */
 	
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* Google Fonts */
-
-body{
-    margin: 0;
-    padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-
-
-/* Stil für die Navigationsleiste */
-.navbar {
-    background: white;
-    padding-top: 35px;
-    padding-right: 50px;
-    padding-left: 50px;
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-
-}
-/* Flexbox-Einstellungen für die Navigation */
-.navdiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-/* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
-li {
-    list-style: none;
-    display: inline-block;
-}
-/* Stil für die Navigationslinks */
-li a {
-    color: rgb(71, 71, 71);
-    font-size: 17px;
-    margin-right: 65px;
-    text-decoration: none;
-}
-
-/* Stil für Mouseover der Navigationslinks */
-li a:hover {
-	border-bottom: 1px solid;
-}
-
-
-/* Container für den Hauptinhalt, zentriert mit Flexbox */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
-    padding: 65px;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    /* Google Fonts */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Stil für die Navigationsleiste */
+    .navbar {
+        background: white;
+        padding-top: 35px;
+        padding-right: 50px;
+        padding-left: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    /* Flexbox-Einstellungen für die Navigation */
+    .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    /* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+    
+    /* Stil für die Navigationslinks */
+    li a {
+        color: rgb(71, 71, 71);
+        font-size: 17px;
+        margin-right: 65px;
+        text-decoration: none;
+    }
+    
+    /* Stil für Mouseover der Navigationslinks */
+    li a:hover {
+        border-bottom: 1px solid;
+    }
+    
+    /* Container für den Hauptinhalt, zentriert mit Flexbox */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+        padding: 65px;
+        box-sizing: border-box;
+    }
+    
+    /* Stil für die Einleitung */
+    #einleitung {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 4vw;
+        font-size: 3vmax;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(71, 71, 71);
+        max-width: 80%;
+        text-align: center;
+    }
+    
+    /* Stil für den Pfeil nach unten */
+    .arrow {
+        position: absolute;
+        margin-top: 420px; /* Abstand zum Paragraphen */
+        color: #F4F1EE;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+    }
+    
+    .arrow span {
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-bottom: 5px solid gray;
+        border-right: 5px solid gray;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: scroll 2s infinite;
+    }
+    
+    .arrow span:nth-child(2) {
+        animation-delay: -.2s;
+    }
+    
+    .arrow span:nth-child(3) {
+        animation-delay: -.4s;
+    }
+    
+    @keyframes scroll {
+        0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+    }
+    
+    /* Flexbox-Stil für die Bildgalerie */
+    .image-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* Abstand zwischen den Bildern */
+        margin-top: 20px;
+    }
+    
+    /* Stil für die einzelnen Bild-Items */
+    .image-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image-item img {
+        max-width: 100px; /* Feste Breite für die Bilder */
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .image-item p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1em;
+        color: rgb(71, 71, 71);
+        text-align: center;
+    }
+    
+    
+    /* Hintergrundfarbe für die erste Seite */
+    .first-section {
+        background-color: white;
+    }
+    
+    /* Hintergrundfarbe für die zweite Seite */
+    .second-section {
+        background-color: #ADCBD4; /* Blass hellblau */
+        width: 100%; /* Volle Breite des Bildschirms */
+        height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 65px;
+        box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
+        color: rgb(71, 71, 71);
+        font-family: "Montserrat", sans-serif;
+        position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
+    }
+    
+    /* Stil für den "HINTERGRUND"-Text in der zweiten Seite */
+    .second-section #hintergrund-text {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 55px;
+        font-weight: 660;
+        color: rgb(71, 71, 71);
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    }
+    
+    /* Stil für die Abschnittsbeschreibung */
+    .section-description {
+        max-width: 800px;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        margin-bottom: 40px;
+    }
+    
+    /* Stil für den Inhalt der zweiten Sektion */
+    .content-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        z-index: 2; /* Um sicherzustellen, dass der Inhalt über dem FOKUS-Text bleibt */
+    }
+    
+    /* Stil für die umklappbaren Boxen */
+    .toggle-box {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: calc(33.333% - 20px); /* Drei Boxen pro Reihe */
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Responsive Anpassungen für die umklappbaren Boxen */
+    @media (max-width: 992px) {
+        .toggle-box {
+            width: calc(50% - 20px); /* Zwei Boxen pro Reihe bei kleineren Bildschirmen */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .toggle-box {
+            width: 100%; /* Eine Box pro Reihe bei noch kleineren Bildschirmen */
+        }
+    }
+    
+    /* Stil für die umklappbaren Box-Buttons */
+    .toggle-btn {
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 1.2em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+    }
+    
+    /* Stil für die umklappbaren Inhalte */
+    .toggle-content {
+        display: none;
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-family: "Montserrat", sans-serif;
+        color: #555;
+    }
+/* Stil für das weiße Textfeld zwischen Sektion 2 und Sektion 3 */
+.between-section {
+    background-color: white; /* Weißer Hintergrund */
+    padding: 5px 0; /* Reduziertes Innenabstand */
     box-sizing: border-box;
-}
-/* Stil für die Einleitung */
-#einleitung {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: 4vw;
-	font-size: 3vmax;
-	font-weight: 400;
-	font-style: normal;
-    color: rgb(71, 71, 71);
-    max-width: 80%;
-    text-align: center;
-}
-/* Stil für den Pfeil nach unten */
-.arrow {
-    position: absolute;
-    margin-top: 420px; /* Abstand zum Paragraphen */
-    color: #F4F1EE;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-}
-.arrow span{
-    display: block;
-    width: 5px;
-    height: 5px;
-    border-bottom: 5px solid gray;
-    border-right: 5px solid gray;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: scroll 2s infinite;
-}
-.arrow span:nth-child(2){
-    animation-delay: -.2s;
-}
-.arrow span:nth-child(3){
-    animation-delay: -.4s;
-}
-
-@keyframes scroll{
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
-
-/* Flexbox-Stil für die Bildgalerie */
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Abstand zwischen den Bildern */
-    margin-top: 20px;
-}
-
-/* Stil für die einzelnen Bild-Items */
-.image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.image-item img {
-    max-width: 100px; /* Feste Breite für die Bilder */
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.image-item p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    color: rgb(71, 71, 71);
-    text-align: center;
-}
-
-.green-hand {
-	display: flex;
-    position: absolute;
-    margin-top: 60px;
-    z-index: 100;
-}
-
-/* Hintergrundfarbe für die erste Seite */
-.first-section {
-    background-color: white;
-}
-/* Hintergrundfarbe für die zweite Seite */
-.second-section {
-    background-color: #ADCBD4; /* Blass hellblau */
-    width: 100%; /* Volle Breite des Bildschirms */
-    height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 65px;
-    box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
     color: rgb(71, 71, 71);
     font-family: "Montserrat", sans-serif;
-    position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
+    text-align: center;
 }
-/* Stil für den "FOKUS"-Text in der zweiten Seite */
-.second-section #hintergrund-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: 50px;
-	font-weight: 660;
-    color: rgb(71, 71, 71);
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    writing-mode: vertical-rl;
-    transform: rotate(-180deg);
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
-}
-/* Stil für die Abschnittsbeschreibung */
-.section-description {
+
+.between-container {
     max-width: 800px;
-    text-align: center;
+    margin: 0 auto; /* Zentriert den Container */
+    max-height: 250px;
+}
+
+.between-container p {
     font-size: 1.2em;
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    margin-bottom: 40px;
-}
-/* Stil für den Inhalt der zweiten Sektion */
-.content-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-    z-index: 2; /* Um sicherzustellen, dass der Inhalt über dem FOKUS-Text bleibt */
-}
-
-/* Stil für die umklappbaren Boxen */
-.toggle-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px); /* Drei Boxen pro Reihe */
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Responsive Anpassungen für die umklappbaren Boxen */
-@media (max-width: 992px) {
-    .toggle-box {
-        width: calc(50% - 20px); /* Zwei Boxen pro Reihe bei kleineren Bildschirmen */
-    }
-}
-
-@media (max-width: 768px) {
-    .toggle-box {
-        width: 100%; /* Eine Box pro Reihe bei noch kleineren Bildschirmen */
-    }
-}
-
-/* Stil für die umklappbaren Box-Buttons */
-.toggle-btn {
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 1.2em;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
-    padding: 0;
-}
-
-/* Stil für die umklappbaren Inhalte */
-.toggle-content {
-    display: none;
-    margin-top: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    color: #555;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Stil für die dritte Sektion */
 .third-section {
-    position: relative; /* Damit das farbteilende Element relativ dazu positioniert werden kann */
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    height: 100vh; /* Höhe der Sektion */
-    overflow: hidden; /* Verhindert das Überlaufen der Farbteilung */
-}
-
-/* Farbteilendes Element */
-.color-divider {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: #D49792; /* Farbe passend zur dritten Sektion */
     width: 100%;
-    height: 100%;
-    background-color: white; /* Hintergrundfarbe für die obere Hälfte */
-    clip-path: polygon(50% 30%, 100% 20%, 100% 100%, 0 100%, 0 17%); /* Angepasste clip-path */
-    overflow: hidden;
-}
-
-/* Bereich innerhalb des Clip-Pfades */
-.color-divider::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #B3C595; /* Farbe für den inneren Bereich */
-    clip-path: polygon(50% 35%, 100% 20%, 100% 100%, 0 100%, 0 20%);
-    z-index: -1;
-}
-.centered-link {
-    position: relative; /* Ändern Sie die Position auf relativ */
-    display: block; /* Setzen Sie den Link auf Block */
-    margin: 0 auto; /* Zentrieren Sie horizontal */
-    text-align: center; /* Zentrieren Sie den Text */
-    color: rgb(163, 194, 141); /* Farbe des Links */
-	font-size: min(max(16px, 3vw), 24px); /* Größe des Links */
+    padding: 65px;
+    box-sizing: border-box;
+    color: rgb(71, 71, 71);
     font-family: "Montserrat", sans-serif;
-	font-style: italic;
-    margin-top: 50px; /* Passen Sie den oberen Abstand nach Bedarf an */
+    position: relative;
 }
-/* Stil für den horizontalen Textcontainer */
-.horizontal-text-container {
-    position: absolute;
-    top: 10px; /* Passt die Position der horizontalen Texte an */
-    right: 0; /* Passt die Position der horizontalen Texte an */
+
+.third-section .section-three {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Stil für die vertikalen Texte */
-.vertical-text {
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
-	font-weight: 660;
-    color: #B3C595;
-    top: 35px;
-    right: 40px;
-    margin: 0 0.1px; /* Abstand zwischen den einzelnen Textteilen */
-    writing-mode: vertical-rl;
-    transform: rotate(0deg); /* Entfernt die Drehung */
-    transform-origin: top left; /* Setzt den Drehpunkt auf die obere linke Ecke */
-}
-
-
-/* Bild im Hintergrund */
-.color-divider img {
-    position: absolute;
-    top: 40%;
-    left: 17%;
-    width: 20%; /* 100% der Breite des Elternelements */
-    height: 50%; /* Volle Höhe des Elternelements */
-    object-fit: cover; /* Skaliert das Bild, um das Elternelement zu füllen */
-    z-index: 1; /* Stellt sicher, dass das Bild im Hintergrund liegt */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Schatten rechts und unten */
-}
-
-/* Stil für den Paragraphen */
-.color-divider p {
-    position: absolute;
-    top: 50%; /* Zentriert den Paragraphen vertikal */
-    left: 45%; /* 5% Abstand zwischen Bild und Paragraph */
-    transform: translateY(-50%); /* Zentriert den Paragraphen vertikal */
-    color: white;
-    font-size: 14px;
+.third-section #aufgaben-text {
     font-family: "Montserrat", sans-serif;
-    max-width: 40%; /* Begrenzt die Breite des Paragraphen */
-    z-index: 1; /* Stellt sicher, dass der Paragraph über dem Bild liegt */
+    font-optical-sizing: auto;
+    font-size: 55px;
+    font-weight: 660;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
 }
+
+.third-section .task-box {
+    display: flex;
+    align-items: center;
+    background: #F8DAD5;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.third-section .task-number {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.third-section .task-content p {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: rgb(71, 71, 71);
+}
+
+
+/* Responsive Anpassungen für die dritte Sektion */
+@media (max-width: 992px) {
+    .third-section .task-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .third-section .task-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
 /* Vierte Seite */
 .fourth-section {
     text-align: right;
