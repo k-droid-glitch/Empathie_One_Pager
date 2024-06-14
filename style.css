@@ -44,8 +44,8 @@ li {
 /* Stil für die Navigationslinks */
 li a {
     color: rgb(71, 71, 71);
-    font-size: 11px;
-    margin-right: 25px;
+    font-size: 17px;
+    margin-right: 65px;
     text-decoration: none;
 }
 
@@ -117,18 +117,34 @@ li a:hover {
     }
 }
 
-
-
-/* Elemente – Hand-Grafiken */
-
-
-.blue-hand {
-    position: absolute;
-    margin-top: 980px; 
-    z-index: 10;
-	justify-content: left;
+/* Flexbox-Stil für die Bildgalerie */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Abstand zwischen den Bildern */
+    margin-top: 20px;
 }
 
+/* Stil für die einzelnen Bild-Items */
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100px; /* Feste Breite für die Bilder */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.image-item p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: rgb(71, 71, 71);
+    text-align: center;
+}
 
 .green-hand {
 	display: flex;
@@ -136,8 +152,6 @@ li a:hover {
     margin-top: 60px;
     z-index: 100;
 }
-
-
 
 /* Hintergrundfarbe für die erste Seite */
 .first-section {
@@ -158,103 +172,87 @@ li a:hover {
     position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
 }
 /* Stil für den "FOKUS"-Text in der zweiten Seite */
-.second-section #focus-text {
+.second-section #hintergrund-text {
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-	font-size: min(max(16px, 10vw), 80px);
+	font-size: 50px;
 	font-weight: 660;
     color: rgb(71, 71, 71);
     color: white;
     position: absolute;
-    top: 35px;
-    left: 30px;
+    top: 0;
+    left: 0;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
 }
-/* Stil für die Paragraphen auf der zweiten Seite */
-.section-two .p_Elements {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 150%;
-    position: relative;
-}
-.paragraph-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin: 0 20px; /* Abstand zwischen den Paragraphen */
-}
-.section-two .paragraph {
+/* Stil für die Abschnittsbeschreibung */
+.section-description {
+    max-width: 800px;
     text-align: center;
-    color: white;
-    font-size: 10px;
+    font-size: 1.2em;
     font-family: "Montserrat", sans-serif;
-    max-width: 200px;
-    margin-bottom: 20px; /*Abstand zum Kreis*/
-}
-/* Stil für die Kreise unter den Paragraphen */
-.circle {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -70px; /* Fester Wert für die Positionierung der Kreise unterhalb der Paragraphen */
-    left: 50%; /* Horizontale Zentrierung */
-    transform: translateX(-50%); /* Zentrierung relativ zum Elternelement */
-    z-index: 1; /* Stellen Sie sicher, dass die Kreise über dem Hintergrund liegen */
-}
-#circle1 {
-    bottom: -23px;
-}
-#circle2 {
-    bottom: -28px;
-}
-#circle3{
-    bottom: -28px;
-}
-/* Zusaetzliche Stildefinitionen */
-.second-section .p_Elements {
-    margin-top: 50px; /* Platzierung des Containers unter dem FOKUS-Text */
-}
-.paragraph_circle {
     color: white;
-    font-size: 10px;
+    margin-bottom: 40px;
+}
+/* Stil für den Inhalt der zweiten Sektion */
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2; /* Um sicherzustellen, dass der Inhalt über dem FOKUS-Text bleibt */
+}
+
+/* Stil für die umklappbaren Boxen */
+.toggle-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Drei Boxen pro Reihe */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Anpassungen für die umklappbaren Boxen */
+@media (max-width: 992px) {
+    .toggle-box {
+        width: calc(50% - 20px); /* Zwei Boxen pro Reihe bei kleineren Bildschirmen */
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle-box {
+        width: 100%; /* Eine Box pro Reihe bei noch kleineren Bildschirmen */
+    }
+}
+
+/* Stil für die umklappbaren Box-Buttons */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    margin-top: 20px; /* Abstand zwischen den Paragraphen und den Kreisen */
-    position: relative; /* Position relativ zum Elternelement */
-}
-#paragraph_circle1{
-    bottom: -55px;
-}
-#paragraph_circle2{
-    bottom: -58px;
-}
-#paragraph_circle3{
-    bottom: -58px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
 }
 
-/* Pfeile zwischen den Kreisen */
-.paragraph-container::after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 5px); /* Vertikale Ausrichtung in der Mitte des Containers */
-    left: calc(100% + 10px); /* Position rechts vom Container */
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid white; /* Pfeil nach rechts */
-}
-
-/* Ausblenden des Pfeils für das letzte .paragraph-container */
-.paragraph-container:last-child::after {
+/* Stil für die umklappbaren Inhalte */
+.toggle-content {
     display: none;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    color: #555;
 }
 
 /* Stil für die dritte Sektion */
