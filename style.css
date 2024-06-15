@@ -3,271 +3,311 @@
 	Empathie-OnePager
 	Version: Flos_edits_v1.0 
 	================================================ */
-	
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    /* Google Fonts */
-    
-    body {
-        margin: 0;
-        padding: 0;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Google Fonts */
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Stil für die Navigationsleiste */
+.navbar {
+    background: white;
+    padding-top: 35px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Flexbox-Einstellungen für die Navigation */
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* Stil für die Navigationslinks */
+li a {
+    color: rgb(71, 71, 71);
+    font-size: 17px;
+    margin-right: 65px;
+    text-decoration: none;
+}
+
+/* Stil für Mouseover der Navigationslinks */
+li a:hover {
+    border-bottom: 1px solid;
+}
+
+/* Container für den Hauptinhalt, zentriert mit Flexbox */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* 100% der Höhe des sichtbaren Bereichs */
+    padding: 65px;
+    box-sizing: border-box;
+}
+
+/* Stil für die Einleitung */
+#einleitung {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 4vw;
+    font-size: 3vmax;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(71, 71, 71);
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Stil für den Pfeil nach unten */
+.arrow {
+    position: absolute;
+    margin-top: 500px;
+    /* Abstand zum Paragraphen */
+    color: #F4F1EE;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.arrow span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-bottom: 5px solid gray;
+    border-right: 5px solid gray;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
     }
-    
-    /* Stil für die Navigationsleiste */
-    .navbar {
-        background: white;
-        padding-top: 35px;
-        padding-right: 50px;
-        padding-left: 50px;
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+
+    50% {
+        opacity: 1;
     }
-    
-    /* Flexbox-Einstellungen für die Navigation */
-    .navdiv {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
     }
-    
-    /* Entfernt Aufzählungszeichen und richtet Listenitems horizontal aus */
-    li {
-        list-style: none;
-        display: inline-block;
-    }
-    
-    /* Stil für die Navigationslinks */
-    li a {
-        color: rgb(71, 71, 71);
-        font-size: 17px;
-        margin-right: 65px;
-        text-decoration: none;
-    }
-    
-    /* Stil für Mouseover der Navigationslinks */
-    li a:hover {
-        border-bottom: 1px solid;
-    }
-    
-    /* Container für den Hauptinhalt, zentriert mit Flexbox */
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
-        padding: 65px;
-        box-sizing: border-box;
-    }
-    
-    /* Stil für die Einleitung */
-    #einleitung {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-size: 4vw;
-        font-size: 3vmax;
-        font-weight: 400;
-        font-style: normal;
-        color: rgb(71, 71, 71);
-        max-width: 80%;
-        text-align: center;
-    }
-    
-    /* Stil für den Pfeil nach unten */
-    .arrow {
-        position: absolute;
-        margin-top: 500px; /* Abstand zum Paragraphen */
-        color: #F4F1EE;
-        justify-content: center;
-        align-items: center;
-        transform: translate(-50%, -50%);
-    }
-    
-    .arrow span {
-        display: block;
-        width: 5px;
-        height: 5px;
-        border-bottom: 5px solid gray;
-        border-right: 5px solid gray;
-        transform: rotate(45deg);
-        margin: -10px;
-        animation: scroll 2s infinite;
-    }
-    
-    .arrow span:nth-child(2) {
-        animation-delay: -.2s;
-    }
-    
-    .arrow span:nth-child(3) {
-        animation-delay: -.4s;
-    }
-    
-    @keyframes scroll {
-        0% {
-            opacity: 0;
-            transform: rotate(45deg) translate(-20px, -20px);
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: rotate(45deg) translate(20px, 20px);
-        }
-    }
-    
-    /* Flexbox-Stil für die Bildgalerie */
-    .image-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 50px; /* Abstand zwischen den Bildern */
-        margin-top: 20px;
-    }
-    
-    /* Stil für die einzelnen Bild-Items */
-    .image-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .image-item img {
-        max-width: 100px; /* Feste Breite für die Bilder */
-        height: auto;
-        margin-bottom: 10px;
-    }
-    
-    .image-item p {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1em;
-        color: rgb(71, 71, 71);
-        text-align: center;
-    }
-    
-    
-    /* Hintergrundfarbe für die erste Seite */
-    .first-section {
-        background-color: white;
-    }
-    
-    /* Hintergrundfarbe für die zweite Seite */
-    .second-section {
-        background-color: #accbd4; /* Blass hellblau */
-        width: 100%; /* Volle Breite des Bildschirms */
-        height: 100vh; /* 100% der Höhe des sichtbaren Bereichs */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 65px;
-        box-sizing: border-box; /* Berücksichtigt Padding in den Gesamtabmessungen */
-        color: rgb(71, 71, 71);
-        font-family: "Montserrat", sans-serif;
-        position: relative; /* Damit der FOKUS-Text absolut positioniert werden kann */
-    }
-    
-    /* Stil für den "HINTERGRUND"-Text in der zweiten Seite */
-    .second-section #hintergrund-text {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-size: 55px;
-        font-weight: 660;
-        color: rgb(71, 71, 71);
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        writing-mode: vertical-rl;
-        transform: rotate(-180deg);
-        z-index: 1; /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
-    }
-    
-    /* Stil für die Abschnittsbeschreibung */
-    .section-description {
-        max-width: 800px;
-        text-align: center;
-        font-size: 1.2em;
-        font-family: "Montserrat", sans-serif;
-        color: white;
-        margin-bottom: 40px;
-    }
-    
-    /* Stil für den Inhalt der zweiten Sektion */
-    .content-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        max-width: 1200px;
-        position: relative;
-        z-index: 2; /* Um sicherzustellen, dass der Inhalt über dem FOKUS-Text bleibt */
-    }
-    
-    /* Stil für die umklappbaren Boxen */
+}
+
+/* Flexbox-Stil für die Bildgalerie */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* Abstand zwischen den Bildern */
+    margin-top: 20px;
+}
+
+/* Stil für die einzelnen Bild-Items */
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100px;
+    /* Feste Breite für die Bilder */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.image-item p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: rgb(71, 71, 71);
+    text-align: center;
+}
+
+
+/* Hintergrundfarbe für die erste Seite */
+.first-section {
+    background-color: white;
+}
+
+/* Styling for the overlapping image */
+.section-overlap-img {
+    position: absolute;
+    top: calc(100vh - 20px);
+    /* Adjust the value to control the overlap amount */
+    left: 20%;
+    transform: translateX(-50%);
+    width: 200px;
+    /* Adjust the size as needed */
+    z-index: 10;
+    /* Ensure it appears above other content */
+}
+
+/* Additional CSS for the second section to accommodate the overlapping image */
+.second-section {
+    padding-top: 150px;
+    /* Adjust to provide space for the overlapping image */
+}
+
+/* Hintergrundfarbe für die zweite Seite */
+.second-section {
+    background-color: #accbd4;
+    /* Blass hellblau */
+    width: 100%;
+    /* Volle Breite des Bildschirms */
+    height: 100vh;
+    /* 100% der Höhe des sichtbaren Bereichs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 65px;
+    box-sizing: border-box;
+    /* Berücksichtigt Padding in den Gesamtabmessungen */
+    color: rgb(71, 71, 71);
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    /* Damit der FOKUS-Text absolut positioniert werden kann */
+}
+
+/* Stil für den "HINTERGRUND"-Text in der zweiten Seite */
+.second-section #hintergrund-text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 55px;
+    font-weight: 660;
+    color: rgb(71, 71, 71);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    z-index: 1;
+    /* Um sicherzustellen, dass der Text über anderen Inhalten bleibt */
+}
+
+/* Stil für die Abschnittsbeschreibung */
+.section-description {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Stil für den Inhalt der zweiten Sektion */
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+    /* Um sicherzustellen, dass der Inhalt über dem FOKUS-Text bleibt */
+}
+
+/* Stil für die umklappbaren Boxen */
+.toggle-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    /* Drei Boxen pro Reihe */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Anpassungen für die umklappbaren Boxen */
+@media (max-width: 992px) {
     .toggle-box {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: calc(33.333% - 20px); /* Drei Boxen pro Reihe */
-        box-sizing: border-box;
-        position: relative;
-        overflow: hidden;
+        width: calc(50% - 20px);
+        /* Zwei Boxen pro Reihe bei kleineren Bildschirmen */
     }
-    
-    /* Responsive Anpassungen für die umklappbaren Boxen */
-    @media (max-width: 992px) {
-        .toggle-box {
-            width: calc(50% - 20px); /* Zwei Boxen pro Reihe bei kleineren Bildschirmen */
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .toggle-box {
-            width: 100%; /* Eine Box pro Reihe bei noch kleineren Bildschirmen */
-        }
-    }
-    
-    /* Stil für die umklappbaren Box-Buttons */
-    .toggle-btn {
-        background: none;
-        border: none;
-        color: #333;
-        font-size: 1.2em;
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        text-align: left;
+}
+
+@media (max-width: 768px) {
+    .toggle-box {
         width: 100%;
-        cursor: pointer;
-        padding: 0;
-        position: relative;
+        /* Eine Box pro Reihe bei noch kleineren Bildschirmen */
     }
-    
-    /* Stil für die umklappbaren Inhalte */
-    .toggle-content {
-        display: none;
-        margin-top: 10px;
-        font-size: 1.2em;
-        font-family: "Montserrat", sans-serif;
-        color: #555;
-    }
+}
+
+/* Stil für die umklappbaren Box-Buttons */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+/* Stil für die umklappbaren Inhalte */
+.toggle-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    color: #555;
+}
+
 /* Stil für das weiße Textfeld zwischen Sektion 2 und Sektion 3 */
 .between-section {
-    background-color: white; /* Weißer Hintergrund */
-    padding: 5px 0; /* Reduziertes Innenabstand */
+    background-color: white;
+    /* Weißer Hintergrund */
+    padding: 5px 0;
+    /* Reduziertes Innenabstand */
     box-sizing: border-box;
     color: rgb(71, 71, 71);
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
+
 .between-container {
     max-width: 800px;
-    margin: 0 auto; /* Zentriert den Container */
+    margin: 0 auto;
+    /* Zentriert den Container */
     max-height: 250px;
 }
 
@@ -276,10 +316,24 @@
     line-height: 1.5;
     margin: 0;
 }
+/* Styling for the overlapping image (Daumen hoch) between between-sections and third sections */
+.section-overlap-img-up {
+    position: absolute;
+    top: calc(200vh + 270px); /* Adjust the value to control the overlap amount */
+    left: 80%;
+    transform: translateX(-50%);
+    width: 200px; /* Adjust the size as needed */
+    z-index: 10; /* Ensure it appears above other content */
+}
 
+/* Additional CSS for the third section to accommodate the overlapping image */
+.third-section {
+    padding-top: 150px; /* Adjust to provide space for the overlapping image */
+}
 /* Stil für die dritte Sektion */
 .third-section {
-    background-color: #dd9e9c; /* Farbe passend zur dritten Sektion */
+    background-color: #dd9e9c;
+    /* Farbe passend zur dritten Sektion */
     width: 100%;
     padding: 65px;
     box-sizing: border-box;
@@ -324,12 +378,12 @@
 .third-section .task-number {
     background: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: bold;
     margin-right: 20px;
 }
@@ -337,12 +391,12 @@
 .third-section .task-number-right {
     background: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: bold;
     margin-left: 20px;
     order: 2;
@@ -371,9 +425,24 @@
         margin: 0 0 10px;
     }
 }
+/* Styling for the overlapping image (Daumen hoch) between between-sections and third sections */
+.section-overlap-img-down {
+    position: absolute;
+    top: calc(400vh); /* Adjust the value to control the overlap amount */
+    left: 80%;
+    transform: translateX(-50%);
+    width: 200px; /* Adjust the size as needed */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Additional CSS for the third section to accommodate the overlapping image */
+.third-section {
+    padding-top: 150px; /* Adjust to provide space for the overlapping image */
+}
 /* Stil für die vierte Sektion */
 .fourth-section {
-    background-color: #b4c696; /* Farbe passend zur vierten Sektion */
+    background-color: #b4c696;
+    /* Farbe passend zur vierten Sektion */
     width: 100%;
     padding: 65px;
     box-sizing: border-box;
@@ -480,4 +549,3 @@
 .footer-links a:hover {
     text-decoration: underline;
 }
-
