@@ -310,6 +310,7 @@
 .third-section .task-box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: #e6b5b3;
     padding: 20px;
     margin: 20px 0;
@@ -333,13 +334,30 @@
     margin-right: 20px;
 }
 
+.third-section .task-number-right {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+    order: 2;
+}
+
+.third-section .task-content {
+    flex: 1;
+}
+
 .third-section .task-content p {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     color: rgb(71, 71, 71);
 }
-
 
 /* Responsive Anpassungen für die dritte Sektion */
 @media (max-width: 992px) {
@@ -348,9 +366,9 @@
         align-items: flex-start;
     }
 
-    .third-section .task-number {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .third-section .task-number,
+    .third-section .task-number-right {
+        margin: 0 0 10px;
     }
 }
 /* Stil für die vierte Sektion */
