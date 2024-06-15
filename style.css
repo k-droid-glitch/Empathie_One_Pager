@@ -79,7 +79,7 @@
     /* Stil für den Pfeil nach unten */
     .arrow {
         position: absolute;
-        margin-top: 420px; /* Abstand zum Paragraphen */
+        margin-top: 500px; /* Abstand zum Paragraphen */
         color: #F4F1EE;
         justify-content: center;
         align-items: center;
