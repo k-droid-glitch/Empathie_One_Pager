@@ -65,7 +65,7 @@
                         <button class="toggle-btn">
                             Reisende Kinder wechseln oft die Schule.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>Einige tun das jede Woche. Andere sind nur für Frühlings- und Herbstfeste unterwegs. Sie
                                 können oft nicht weit vorplanen, an welcher Schule sie landen. Bei Zirkussen
@@ -77,7 +77,7 @@
                         <button class="toggle-btn">
                             Nur im Unterricht können reisende Kinder sich allein auf das Lernen konzentrieren.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>In einem Familienbetrieb wird jede Hand gebraucht. Selbst wenn sie nicht gerade beim
                                 Tagesgeschäft helfen, finden die Kinder beruflich Reisender daheim oft nicht die Ruhe,
@@ -88,7 +88,7 @@
                         <button class="toggle-btn">
                             Reisende Kinder haben oft Probleme mit schulischem Lernen.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>In ihrem Alltag brauchen und üben reisende Kinder Fähigkeiten, die nicht in der Schule
                                 gelehrt werden. Viele von ihnen sind handwerklich, technisch, sportlich oder artistisch
@@ -100,7 +100,7 @@
                         <button class="toggle-btn">
                             In den Schulen halten sich reisende Kinder zurück.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>Viele reisende Kinder kämpfen mit Diskriminierung und Vorurteilen. Sie lernen deshalb
                                 früh, sich in der Schule unauffällig zu verhalten, fragen selten nach Hilfe und gehen
@@ -111,7 +111,7 @@
                         <button class="toggle-btn">
                             Reisende Kinder sind sehr eigenständig.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>Oft sind reisende Kinder sehr redegewandt und in vielen Dingen reifer als Gleichaltrige.
                                 Diese Unterschiede können manchmal zu Spannungen zwischen Schülerinnen und Schülern
@@ -122,7 +122,7 @@
                         <button class="toggle-btn">
                             Reisende Kinder brauchen Kontinuität.
                         </button>
-                        <div class="arrow-down">&#9660;</div>
+                        <button class="arrow-down">&#9660;</button>
                         <div class="toggle-content">
                             <p>Deswegen ist es wichtig, dass sie auch nach Lernunterbrechungen (durch Reisestage o. ä.)
                                 nahtlos weiter lernen können. Dafür arbeiten sie nach ihren individuellen Lernplänen und
@@ -135,10 +135,14 @@
     </div>
 
     <script>
-        document.querySelectorAll('.toggle-btn').forEach(button => {
+        document.querySelectorAll('.arrow-down').forEach(button => {
             button.addEventListener('click', () => {
-                const content = button.nextElementSibling.nextElementSibling; // Ändert den Inhalt
+                const content = button.nextElementSibling;
                 const isVisible = content.style.display === 'block';
+
+                document.querySelectorAll('.toggle-content').forEach(box => {
+                    box.style.display = 'none';
+                });
 
                 content.style.display = isVisible ? 'none' : 'block';
             });
