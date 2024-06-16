@@ -478,6 +478,7 @@ li a:hover {
     width: 100%;
     max-width: 800px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .third-section .task-number {
@@ -491,7 +492,9 @@ li a:hover {
     font-size: 2.5em;
     font-weight: bold;
     color: #dd9e9c;
-    margin-right: 20px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
 }
 
 .third-section .task-number-right {
@@ -504,12 +507,16 @@ li a:hover {
     align-items: center;
     font-size: 2.5em;
     font-weight: bold;
-    margin-left: 20px;
-    order: 2;
+    color: #dd9e9c;
+    position: absolute;
+    top: -30px;
+    right: -30px;
 }
 
 .third-section .task-content {
     flex: 1;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .third-section .task-content p {
@@ -529,6 +536,11 @@ li a:hover {
     .third-section .task-number,
     .third-section .task-number-right {
         margin: 0 0 10px;
+    }
+
+    .third-section .task-content {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
