@@ -140,13 +140,8 @@
                 const content = button.nextElementSibling;
                 const isVisible = content.style.display === 'block';
 
-                if (!isVisible) {
-                    content.style.display = 'block';
-                    button.innerHTML = '&#9650;';
-                } else {
-                    content.style.display = 'none';
-                    button.innerHTML = '&#9660;';
-                }
+                content.style.display = isVisible ? 'none' : 'block';
+                button.innerHTML = isVisible ? '&#9660;' : '&#9650;';
             });
         });
     </script>
