@@ -187,7 +187,43 @@
     .first-section {
         background-color: white;
     }
-    
+/* Stil für die Übergangsbild */
+.transition-image {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin-top: -100px; /* Anpassung des Wertes, um das Bild in den Übergang zu setzen */
+}
+
+.transition-image img {
+    width: 150px; /* Größe des Bildes anpassen */
+    height: auto;
+    position: absolute;
+    left: 10%; /* Positionierung nach links */
+    transform: translateX(-10%);
+    bottom: -60px; /* Anpassung des Wertes, um das Bild in den Übergang zu setzen */
+    z-index: 2;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .transition-image img {
+        width: 100px; /* Kleinere Größe für mobile Geräte */
+        left: 5%;
+        transform: translateX(-5%);
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transition-image img {
+        width: 80px; /* Noch kleinere Größe für sehr kleine Geräte */
+        left: 5%;
+        transform: translateX(-5%);
+        bottom: -20px;
+    }
+}
+
     /* Hintergrundfarbe für die zweite Seite */
     .second-section {
         background-color: #accbd4;
