@@ -289,8 +289,17 @@ li a:hover {
     cursor: pointer;
     padding: 0;
     position: relative;
+    display: flex;
+    justify-content: space-between; /* Hinzugefügt, um den Pfeil nach rechts zu schieben */
+    align-items: center; /* Zentriert den Text und den Pfeil vertikal */
 }
 
+/* Stil für die Pfeile */
+.arrow-down {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px; /* Abstand zum Toggle-Button */
+}
 /* Stil für die umklappbaren Inhalte */
 .toggle-content {
     display: none;
