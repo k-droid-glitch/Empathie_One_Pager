@@ -140,14 +140,6 @@
                 const content = button.nextElementSibling;
                 const isVisible = content.style.display === 'block';
 
-                document.querySelectorAll('.toggle-content').forEach(box => {
-                    box.style.display = 'none';
-                });
-
-                document.querySelectorAll('.arrow-down').forEach(arrow => {
-                    arrow.innerHTML = '&#9660;';
-                });
-
                 if (!isVisible) {
                     content.style.display = 'block';
                     button.innerHTML = '&#9650;';
