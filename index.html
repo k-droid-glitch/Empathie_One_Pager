@@ -135,16 +135,55 @@
     </div>
 
     <script>
-        document.querySelectorAll('.arrow-down').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const isVisible = content.style.display === 'block';
-
-                content.style.display = isVisible ? 'none' : 'block';
-                button.innerHTML = isVisible ? '&#9660;' : '&#9650;';
-            });
-        });
-    </script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const boxes = document.querySelectorAll('.toggle-box');
+	
+			boxes.forEach(box => {
+				const button = box.querySelector('.arrow-down');
+				const content = button.nextElementSibling;
+	
+				button.addEventListener('click', () => {
+					const isVisible = content.style.display === 'block';
+	
+					content.style.display = isVisible ? 'none' : 'block';
+					button.innerHTML = isVisible ? '&#9660;' : '&#9650;';
+	
+					// Adjust height of the parent box
+					if (!isVisible) {
+						box.style.height = box.scrollHeight + 'px';
+					} else {
+						box.style.height = '200px'; // Reset to default height
+					}
+	
+					// Adjust heights of all expanded boxes
+					adjustExpandedBoxesHeight();
+				});
+			});
+	
+			function adjustExpandedBoxesHeight() {
+				// Get max height of all expanded boxes
+				let maxHeight = 200; // Default min height
+				boxes.forEach(box => {
+					const content = box.querySelector('.toggle-content');
+					if (content.style.display === 'block') {
+						const currentHeight = box.scrollHeight;
+						if (currentHeight > maxHeight) {
+							maxHeight = currentHeight;
+						}
+					}
+				});
+	
+				// Set all expanded boxes to the max height
+				boxes.forEach(box => {
+					const content = box.querySelector('.toggle-content');
+					if (content.style.display === 'block') {
+						box.style.height = maxHeight + 'px';
+					}
+				});
+			}
+		});
+	</script>
+	
 
     <!-- Weißes Textfeld zwischen Sektion 2 und Sektion 3 -->
     <div id="between-sections">
