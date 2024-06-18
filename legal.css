@@ -42,7 +42,7 @@ li {
 /* Stil für die Navigationslinks */
 li a {
     color: rgb(71, 71, 71);
-    font-size: 18px;
+    font-size: 14px;
     margin-right: 25px;
     text-decoration: none;
 }
@@ -52,33 +52,50 @@ li a:hover {
     border-bottom: 1px solid;
 }
 
-/* Stil für den Footer */
-footer {
-    background: #f0f0f0;
-    padding: 10px;
+/* Footer Styling */
+.footer {
+    background-color: #F4F1EE;
+    padding: 20px 0;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
     color: rgb(71, 71, 71);
-    border-top: 1px solid #ddd;
-    margin-top: auto;
+    position: relative;
 }
 
-/* Stil für den Link im Footer */
-footer a {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content span {
+    font-size: 0.8em;
+}
+
+.footer-content img {
+    height: 33px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
     color: rgb(71, 71, 71);
     text-decoration: none;
+    font-size: 0.8em;
 }
 
-/* Stil für Mouseover des Links im Footer */
-footer a:hover {
+.footer-links a:hover {
     text-decoration: underline;
 }
 
-/* Stil für den fettgedruckten Text im Footer */
-footer strong {
-    font-weight: bold;
-}
+
+
 
 /* Stil für den zentralen Inhalt */
 .content-center {
@@ -86,13 +103,15 @@ footer strong {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     padding: 20px;
     font-family: "Montserrat", sans-serif; /* Schriftart */
     color: rgb(71, 71, 71); /* Schriftfarbe */
-padding-right: 15%;
-padding-left: 15%;
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-top: 150px;
+	padding-bottom: 100px;
 }
 
 .content-center h1,
